@@ -1,7 +1,20 @@
 <testExecutions version="1">
+  <file path="src/app/book/book.service.spec.ts">
+    <testCase name="Service: Book should ..." duration="9"/>
+  </file>
+  <file path="src/app/book/book-list/book-list.component.spec.ts">
+    <testCase name="BookListComponent should have 10 &lt;div.col.mb-2> elements" duration="31"/>
+    <testCase name="BookListComponent should have 10 &lt;card.p-2> elements" duration="7"/>
+    <testCase name="BookListComponent should create" duration="4"/>
+    <testCase name="BookListComponent should have the corresponding src to the book image and alt to the book name" duration="6"/>
+    <testCase name="BookListComponent should have h5 tag with the book.name" duration="4"/>
+    <testCase name="BookListComponent should have 10 &lt;img> elements" duration="4"/>
+    <testCase name="BookListComponent should have 10 &lt;div.card-body> elements" duration="4"/>
+    <testCase name="BookListComponent should have 9 &lt;div.col.mb-2> elements and the deleted book should not exist" duration="6"/>
+    <testCase name="BookListComponent should have p tag with the book.editorial.name" duration="5"/>
+  </file>
   <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should have as title 'base-project'" duration="118"/>
-    <testCase name="AppComponent should create the app" duration="14"/>
-    <testCase name="AppComponent should render title" duration="13"/>
+    <testCase name="AppComponent should have as title 'base-project'" duration="5"/>
+    <testCase name="AppComponent should create the app" duration="2"/>
   </file>
 </testExecutions>
