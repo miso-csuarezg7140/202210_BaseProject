@@ -16,7 +16,7 @@ describe('BookListComponent', () => {
 
  beforeEach(async(() => {
    TestBed.configureTestingModule({
-     imports: [HttpClientModule],
+     imports: [ HttpClientModule ],
      declarations: [ BookListComponent ],
      providers: [ BookService ]
    })
