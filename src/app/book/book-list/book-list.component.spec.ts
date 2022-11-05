@@ -75,7 +75,7 @@ describe('BookListComponent', () => {
 
      expect(img.attributes['alt']).toEqual(
        component.books[i].name)
-   })
+   });
  });
 
  it('should have h5 tag with the book.name', () => {
