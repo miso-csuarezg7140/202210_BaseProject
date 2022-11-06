@@ -8,6 +8,7 @@ import { Editorial } from 'src/app/editorial/editorial';
 import { Author } from 'src/app/author/author';
 import { faker } from '@faker-js/faker';
 import { BookDetail } from '../book-detail';
+import { Review } from '../review';
 
 describe('BookDetailComponent', () => {
   let component: BookDetailComponent;
@@ -42,6 +43,17 @@ describe('BookDetailComponent', () => {
      authors.push(author);
     }
 
+    const reviews: Review[] = [];
+    for(let i = 0; i < 3; i++) {
+      const review = new Review(
+        faker.datatype.number(),
+        faker.lorem.sentence(),
+        faker.lorem.sentence(),
+        faker.lorem.sentence()
+      );
+      reviews.push(review);
+    }
+
     component.bookDetail = new BookDetail(
       faker.datatype.number(),
       faker.lorem.sentence(),
@@ -51,7 +63,7 @@ describe('BookDetailComponent', () => {
       faker.date.past(),
       editorial,
       authors,
-      []
+      reviews
     );
 
     fixture.detectChanges();
@@ -79,7 +91,7 @@ describe('BookDetailComponent', () => {
     );
   });
 
-  it('should have 3 <dd> elements', () => {
+  it('should have 3 dd.caption elements', () => {
     expect(debug.queryAll(By.css('dd.caption'))).toHaveSize(3)
   });
 
@@ -105,5 +117,9 @@ describe('BookDetailComponent', () => {
       return value.nativeElement.textContent == 'Editorial';
     });
     expect(node?.nativeElement.nextSibling.textContent).toContain(component.bookDetail.editorial.name);
+  });
+
+  it('should have 3 dd.review elements', () => {
+    expect(debug.queryAll(By.css('dd.review'))).toHaveSize(3);
   });
 });
