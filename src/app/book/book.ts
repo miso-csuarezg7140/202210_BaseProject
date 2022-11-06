@@ -6,7 +6,7 @@ export class Book {
   isbn: string;
   description: string;
   image: string;
-  publishingdate: any;
+  publishingDate: any;
   editorial: Editorial;
 
   constructor(
@@ -23,7 +23,7 @@ export class Book {
     this.isbn = isbn;
     this.description = description;
     this.image = image;
-    this.publishingdate = publishingdate;
+    this.publishingDate = publishingdate;
     this.editorial = editorial;
   }
 }
